@@ -1,0 +1,14 @@
+{
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "description": "CoffeeShop web platform",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "image": "heroku/nodejs",
+  "name": "CoffeeShop",
+  "scripts": {
+    "postdeploy": "cd frontend/ && yarn && yarn build"
+  }
+}
